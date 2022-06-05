@@ -11,8 +11,8 @@ def calculate_total(amount, rate, desired_currency):
     print(f"You received {total} {desired_currency.upper()}.")
 
 def get_currency_code():
-    return input().strip().lower()
-    
+    return input("> ").strip().lower()
+
 if __name__ == "__main__":
     current_currency = get_currency_code()
     if current_currency == "":
@@ -29,7 +29,7 @@ if __name__ == "__main__":
         if desired_currency == "":
             break
         try:
-            amount = float(input())
+            amount = float(input("> "))
         except ValueError:
             break
         print("Checking the chache...")
